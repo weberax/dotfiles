@@ -117,6 +117,8 @@ alias more=less
 alias la='ls -a'
 alias svim=sudoedit
 
+alias gdb='gdb -nh -x "$XDG_CONFIG_HOME"/gdb/init'
+
 alias dotconf='git --git-dir=$HOME/.dotconf --work-tree=$HOME'	# work with config
 
 
