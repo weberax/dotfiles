@@ -75,7 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # custom z file
-_Z_DATA="$XDG_DATA_HOME/zsh/z"
+export _Z_DATA="$XDG_DATA_HOME/zsh/z"
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -85,6 +85,18 @@ export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
 # python auto-startup, moves history
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
+
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+export LESSHISTFILE=-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -118,6 +130,7 @@ alias la='ls -a'
 alias svim=sudoedit
 
 alias gdb='gdb -nh -x "$XDG_CONFIG_HOME"/gdb/init'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
 
 alias dotconf='git --git-dir=$HOME/.dotconf --work-tree=$HOME'	# work with config
 
