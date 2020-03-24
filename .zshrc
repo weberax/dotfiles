@@ -80,6 +80,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# different vimrc path
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

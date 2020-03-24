@@ -1,12 +1,18 @@
+" moved .vim folder
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
 " vundle pluginmanager
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=$XDG_CONFIG_HOME/vim/bundle/Vundle.vim
+" call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call vundle#begin('$XDG_CONFIG_HOME/vim/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -36,6 +42,9 @@ filetype plugin indent on    " required
 " :sadfsdPluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
+
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath-=~/.vim
 
 syntax on
 colorscheme monokai
@@ -78,9 +87,7 @@ nnoremap E $
 
 " backup at tmp
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 "enable folding
