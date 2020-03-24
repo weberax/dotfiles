@@ -29,6 +29,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'moznion/jcommenter.vim'
+Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'eclim', {'pinned': 1}
 
 " All of your Plugins must be added before the following line
