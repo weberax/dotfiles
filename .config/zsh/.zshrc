@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # custom z file
 export _Z_DATA="$XDG_DATA_HOME/zsh/z"
+[ -d ${_Z_DATA%/*} ] || mkdir -p ${_Z_DATA%/*}
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -134,6 +135,9 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
 
 alias dotconf='git --git-dir=$HOME/.dotconf --work-tree=$HOME'	# work with config
 
+
+# create foler strukture for history-file
+[ -d ${HISTFILE%/*} ] || mkdir -p ${HISTFILE%/*}
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
