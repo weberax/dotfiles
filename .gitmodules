@@ -3,6 +3,6 @@
 	url = https://github.com/VundleVim/Vundle.vim.git
 	shallow = true
 [submodule "ohmyzsh"]
-	path = .oh-my-zsh
+	path = .config/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 	shallow = true
