@@ -77,10 +77,14 @@ source $ZSH/oh-my-zsh.sh
 # custom z file
 _Z_DATA="$XDG_DATA_HOME/zsh/z"
 
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # different vimrc path
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+
+# python auto-startup, moves history
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
