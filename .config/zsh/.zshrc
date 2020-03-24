@@ -1,10 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
 
@@ -77,6 +73,9 @@ plugins=(git colored-man-pages z)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# custom z file
+_Z_DATA="$XDG_DATA_HOME/zsh/z"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
