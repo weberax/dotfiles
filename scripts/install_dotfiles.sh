@@ -14,4 +14,6 @@ dotgit checkout
 dotgit submodule init
 dotgit submodule update
 dotgit config status.showUntrackedFiles no
+
+mkdir -p ~/.local/share/zsh
 exit 0
