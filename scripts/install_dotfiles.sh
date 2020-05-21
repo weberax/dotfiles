@@ -16,4 +16,5 @@ dotgit submodule update
 dotgit config status.showUntrackedFiles no
 
 mkdir -p ~/.local/share/zsh
+mkdir -p ~/.cache/vim
 exit 0
