@@ -15,6 +15,9 @@ dotgit submodule init
 dotgit submodule update
 dotgit config status.showUntrackedFiles no
 
+dotgit remote set-url origin git@github.com:weberax/dotfiles.git
+dotgit branch --set-upstream-to origin
+
 mkdir -p ~/.local/share/zsh
 mkdir -p ~/.cache/vim
 exit 0
