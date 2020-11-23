@@ -1,5 +1,12 @@
 #!/bin/bash
 # scritp to pull and install my dotfiles
+# install with 'curl https://raw.githubusercontent.com/weberax/dotfiles/master/scripts/install_dotfiles.sh | bash'
+
+if [ -z "$HOME" ]
+then
+    echo "could not find HOME"
+    exit 1
+fi
 
 git clone --bare https://github.com/weberax/dotfiles.git $HOME/.dotconf
 
