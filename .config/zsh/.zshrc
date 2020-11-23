@@ -99,6 +99,11 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export LESSHISTFILE=-
 
+export EDITOR='vim'
+
+# go path
+export PATH="$HOME/go/bin:$PATH"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -135,6 +140,8 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
 
 alias dotconf='git --git-dir=$HOME/.dotconf --work-tree=$HOME'	# work with config
 
+alias ssdl='~/scripts/remote-ssh-dl.sh'
+
 
 # create foler strukture for history-file
 [ -d ${HISTFILE%/*} ] || mkdir -p ${HISTFILE%/*}
@@ -166,6 +173,12 @@ cl() { cd "$@" && ll; }
 
 weather() {curl "http://wttr.in" --silent}
 
+pdf() {qpdfview $@ >/dev/null 2>/dev/null &; disown}
+
+jc() {python ~/playground/jumpcutter/jumpcutter.py -i "$@"}
+
+mdc() {pandoc $1 -o ${1%md}pdf}
+
 # run ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
@@ -173,3 +186,9 @@ fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
     eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")" > /dev/null
 fi
+
+#faster keys
+xset r rate 300 50
+
+# cowsay random command
+cowsay -f $(cowsay -l | sed '/Cow files in/d' | awk '{for(i=1;i<=NF;i++){print $i}}' | shuf -n1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)
