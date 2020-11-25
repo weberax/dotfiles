@@ -31,6 +31,8 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'moznion/jcommenter.vim'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'justinmk/vim-sneak'
+Plugin 'dart-lang/dart-vim-plugin'
 " Plugin 'eclim', {'pinned': 1}
 
 " All of your Plugins must be added before the following line
@@ -81,7 +83,6 @@ nmap Ö :enew <cr>
 nmap ö :bprev <cr>
 nmap ä :bnext <cr>
 nmap Ä :bd <cr>
-
 
 " move to beginning/end of line
 nnoremap B ^
