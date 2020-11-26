@@ -26,5 +26,4 @@ dotgit remote set-url origin git@github.com:weberax/dotfiles.git
 dotgit branch --set-upstream-to origin
 
 mkdir -p ~/.local/share/zsh
-mkdir -p ~/.cache/vim
 exit 0

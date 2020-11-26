@@ -81,9 +81,6 @@ export _Z_DATA="$XDG_DATA_HOME/zsh/z"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# different vimrc path
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
-
 # python auto-startup, moves history
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
@@ -99,7 +96,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export LESSHISTFILE=-
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # go path
 export PATH="$HOME/go/bin:$PATH"
@@ -134,6 +131,7 @@ alias free='free -m'                      # show sizes in MB
 alias more=less
 alias la='ls -a'
 alias svim=sudoedit
+alias vim=nvim
 
 alias gdb='gdb -nh -x "$XDG_CONFIG_HOME"/gdb/init'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
