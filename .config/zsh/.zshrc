@@ -97,6 +97,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export LESSHISTFILE=-
 
 export EDITOR='nvim'
+export GIT_EDITOR="nvim -c 'set spell'"
 
 # go path
 export PATH="$HOME/go/bin:$PATH"
@@ -189,4 +190,4 @@ fi
 xset r rate 300 50
 
 # cowsay random command
-cowsay -f $(cowsay -l | sed '/Cow files in/d' | awk '{for(i=1;i<=NF;i++){print $i}}' | shuf -n1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)
+#cowsay -f $(cowsay -l | sed '/Cow files in/d' | awk '{for(i=1;i<=NF;i++){print $i}}' | shuf -n1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)

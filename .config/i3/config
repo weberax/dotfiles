@@ -449,6 +449,7 @@ for_window [title="Figure 1"] floating enable, border pixel 3 ,resize set 900 90
 
 #toggle touchpad
 bindsym $mod+Shift+t exec ~/scripts/touchpad_toggle.sh
+exec --no-startup-id ~/scripts/touchpad_toggle.sh
 
 #connect external monitor
 bindsym $mod+Shift+Ctrl+9 exec ~/scripts/ext_mon.sh
