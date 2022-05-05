@@ -168,6 +168,11 @@ ctex() {
 	fi
 }
 
+texcompile() {
+  latexmk -pvc -pdf $1&
+  zathura "$1.pdf"
+}
+
 cl() { cd "$@" && ll; }
 
 weather() {curl "http://wttr.in" --silent}
@@ -177,6 +182,10 @@ pdf() {qpdfview $@ >/dev/null 2>/dev/null &; disown}
 jc() {python ~/playground/jumpcutter/jumpcutter.py -i "$@"}
 
 mdc() {pandoc $1 -o ${1%md}pdf}
+
+tmxhf() {~/scripts/tmuxHF.sh}
+
+tmxgav() {cd ~/playground/gavel && tmux start-server && tmux new-session -d -s "gav" && tmux selectp -t 0 && tmux send-keys "vagrant up && vagrant rsync-auto & vagrant ssh" C-m && tmux attach-session -t "gav"}
 
 # run ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
