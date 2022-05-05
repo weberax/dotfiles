@@ -1,14 +1,15 @@
 #!/bin/bash
 
-EXTERNAL="HDMI1"
+EXTERNAL="HDMI-1"
+INTERNAL="eDP-1"
 
 function ExternalConnected {
 	! xrandr | grep $EXTERNAL | grep -q disconnected
 }
 
 function ActivateHDMI {
-	xrandr --output $EXTERNAL --auto --below eDP1
-	xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output $EXTERNAL --mode 1366x768 --pos 1920x1080 --rotate normal
+	xrandr --output $EXTERNAL --auto --below $INTERNAL
+	xrandr --output $INTERNAL --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output $EXTERNAL --mode 1366x768 --pos 1920x1080 --rotate normal
 	notify-send -t 1500 "External monitor toggled on."
 }
 
