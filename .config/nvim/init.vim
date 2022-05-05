@@ -8,8 +8,9 @@ endif
 call plug#begin(stdpath('config') . '/plugged')
 
 Plug 'crusoexia/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar'
 
 Plug 'djoshea/vim-autoread'
@@ -37,7 +38,12 @@ call plug#end()
 
 
 syntax on
+"colorscheme monokai
+source ~/.config/nvim/vim.color
+"set background=light
+if (&background == "dark")
 colorscheme monokai
+endif
 
 set splitright
 set number relativenumber
@@ -47,9 +53,10 @@ set showmatch
 set incsearch
 set wildmenu
 set encoding=utf-8
-set tabstop=8
-set softtabstop=4
-set shiftwidth=4
+set expandtab
+set tabstop=4
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 inoremap jk <esc>
 
@@ -76,8 +83,8 @@ nnoremap B ^
 nnoremap E $
 
 " move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>

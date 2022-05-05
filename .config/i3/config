@@ -453,3 +453,6 @@ exec --no-startup-id ~/scripts/touchpad_toggle.sh
 
 #connect external monitor
 bindsym $mod+Shift+Ctrl+9 exec ~/scripts/ext_mon.sh
+
+#toggle light dark
+bindsym $mod+Shift+n exec ~/scripts/light-dark-toggle.sh
